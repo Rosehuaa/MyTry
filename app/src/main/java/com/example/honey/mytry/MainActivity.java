@@ -67,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
 
         //提交按钮
         Button button=(Button)findViewById(R.id.submit);//在xml中找到按钮
+
         button.setOnClickListener(new submitOnClickListener(page));//为按钮绑定事件
     }
 
