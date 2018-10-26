@@ -12,18 +12,20 @@
         android:layout_height="match_parent"
         android:orientation="horizontal"
         >
+        <!--答案选项图标-->
         <ImageView
             android:id="@+id/image"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
             android:layout_margin="10dp"
 
             />
+        <!--答案-->
         <TextView
             android:id="@+id/txt_answer_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="12sp"
+            android:textSize="18dp"
             android:textColor="#595757"
             android:layout_gravity="center_vertical"
             />

@@ -24,9 +24,7 @@ import com.example.honey.mytry.entity.Answer;
 import com.example.honey.mytry.entity.Page;
 import com.example.honey.mytry.entity.Quesition;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+
 
 import java.util.ArrayList;
 
@@ -48,6 +46,14 @@ public class MainActivity extends AppCompatActivity {
     //存每个答案的imageview
     private ArrayList<ImageView> imglist2;
 
+    private float o;
+    private float c;
+    private float e;
+    private float a;
+    private float n;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,72 +73,66 @@ public class MainActivity extends AppCompatActivity {
     private void initDate() {
         //假数据、
 //定义初始化答案
-        Answer a_one=new Answer();
-        a_one.setAnswerId("0");
-        a_one.setAnswer_content("男");
-        a_one.setAns_state(0);
-        Answer a_two=new Answer();
-        a_two.setAnswerId("1");
-        a_two.setAnswer_content("女");
-        a_two.setAns_state(0);
+        Answer one=new Answer();
+        one.setAnswerId("0");
+        one.setScore(1);
+        one.setAnswer_content(getString(R.string.TotalInconsistent));
+        one.setAns_state(0);
 
-        Answer a_three=new Answer();
-        a_three.setAnswerId("3");
-        a_three.setAnswer_content("是");
-        a_three.setAns_state(0);
-        Answer a_four=new Answer();
-        a_four.setAnswerId("4");
-        a_four.setAnswer_content("不是");
-        a_four.setAns_state(0);
+        Answer two=new Answer();
+        two.setAnswerId("1");
+        two.setScore(2);
+        two.setAnswer_content(getString(R.string.RelativelyInconsistent));
+        two.setAns_state(0);
 
-        Answer a_three1=new Answer();
-        a_three1.setAnswerId("3");
-        a_three1.setAnswer_content("是");
-        a_three1.setAns_state(0);
-        Answer a_four1=new Answer();
-        a_four1.setAnswerId("4");
-        a_four1.setAnswer_content("不是");
-        a_four1.setAns_state(0);
+        Answer three=new Answer();
+        three.setAnswerId("2");
+        three.setScore(3);
+        three.setAnswer_content(getString(R.string.Commonly));
+        three.setAns_state(0);
 
-        ArrayList<Answer> answers_one=new ArrayList<Answer>();
-        answers_one.add(a_one);
-        answers_one.add(a_two);
+        Answer four=new Answer();
+        four.setAnswerId("3");
+        four.setScore(4);
+        four.setAnswer_content(getString(R.string.RelativelyConsistent));
+        four.setAns_state(0);
+
+        Answer five=new Answer();
+        five.setAnswerId("4");
+        five.setScore(5);
+        five.setAnswer_content(getString(R.string.TotallyConsistent));
+        five.setAns_state(0);
+
+        ArrayList<Answer> answers_ocean=new ArrayList<Answer>();
+        answers_ocean.add(one);
+        answers_ocean.add(two);
+        answers_ocean.add(three);
+        answers_ocean.add(four);
+        answers_ocean.add(five);
 
 
-        ArrayList<Answer> answers_two=new ArrayList<Answer>();
-        answers_two.add(a_one);
-        answers_two.add(a_two);
-        answers_two.add(a_three);
-        answers_two.add(a_four);
 
-        ArrayList<Answer> answers_three=new ArrayList<Answer>();
-        answers_three.add(a_one);
-        answers_three.add(a_two);
-        answers_three.add(a_three);
-        answers_three.add(a_four);
-        answers_three.add(a_three1);
-        answers_three.add(a_four1);
 //定义初始化问题
 
         Quesition q_one=new Quesition();
         q_one.setQuesitionId("00");
         q_one.setType("0");
-        q_one.setContent("1、您的性别：");
-        q_one.setAnswers(answers_one);
+        q_one.setContent("1、喜欢我吗：");
+        q_one.setAnswers(answers_ocean);
         q_one.setQue_state(0);
 
         Quesition q_two=new Quesition();
         q_two.setQuesitionId("01");
         q_two.setType("1");
-        q_two.setContent("2、您是党员吗？");
-        q_two.setAnswers(answers_two);
+        q_two.setContent("2、喜欢你吗？");
+        q_two.setAnswers(answers_ocean);
         q_two.setQue_state(0);
 
         Quesition q_three=new Quesition();
         q_three.setQuesitionId("03");
         q_three.setType("1");
-        q_three.setContent("3、您是dsfsdfsd吗？");
-        q_three.setAnswers(answers_three);
+        q_three.setContent("3、喜欢她吗？");
+        q_three.setAnswers(answers_ocean);
         q_three.setQue_state(0);
 
         ArrayList<Quesition> quesitions=new ArrayList<Quesition>();
@@ -143,7 +143,7 @@ public class MainActivity extends AppCompatActivity {
         page=new Page();
         page.setPageId("000");
         page.setStatus("0");
-        page.setTitle("第一次调查问卷");
+        page.setTitle("大五人格测试");
         page.setQuesitions(quesitions);
         //加载布局
          initView(page);
@@ -218,8 +218,6 @@ public class MainActivity extends AppCompatActivity {
             // TODO Auto-generated method stub
             //判断是否答完题
             boolean isState=true;
-            //最终要的json数组
-            JSONArray jsonArray = new JSONArray();
             //点击提交的时候，先判断状态，如果有未答完的就提示，如果没有再把每条答案提交（包含问卷ID 问题ID 及答案ID）
             //注：不用管是否是一个问题的答案，就以答案的个数为准来提交上述格式的数据
             for(int i=0;i<the_quesition_list.size();i++){
@@ -227,54 +225,28 @@ public class MainActivity extends AppCompatActivity {
                 //判断是否有题没答完
                 if(the_quesition_list.get(i).getQue_state()==0){
                     Toast.makeText(getApplicationContext(), "您第"+(i+1)+"题没有答完", Toast.LENGTH_LONG).show();
-                    jsonArray=null;
                     isState=false;
                     break;
-                }else{
-                    for(int j=0;j<the_answer_list.size();j++){
-                        if(the_answer_list.get(j).getAns_state()==1){
-                            JSONObject json = new JSONObject();
-                            try {
-                                json.put("psychologicalId", page.getPageId());
-                                json.put("questionId", the_quesition_list.get(i).getQuesitionId());
-                                json.put("optionId", the_answer_list.get(j).getAnswerId());
-                                jsonArray.put(json);
-                            } catch (JSONException e) {
-                                // TODO Auto-generated catch block
-                                e.printStackTrace();
-                            }
-                            Intent intent =new Intent(MainActivity.this,Result.class);
-                            // 启动
-                            startActivity(intent);
-                        }
-
-                    }
                 }
+            }
+            if(isState==true){
+                //计算各项分数
+                Intent toResult =new Intent(MainActivity.this,Result.class);
+                // 启动
+
+                toResult.putExtra("o", o);
+                toResult.putExtra("c", c);
+                toResult.putExtra("e", e);
+                toResult.putExtra("e", a);
+                toResult.putExtra("e", n);
+
+                startActivity(toResult);
 
             }
-            if(isState){
-                if(jsonArray.length()>0){
-                    Log.e("af", jsonArray.toString());
-                    for(int item=0;item<jsonArray.length();item++){
-                        JSONObject job;
-                        try {
-                            job = jsonArray.getJSONObject(item);
-                            Log.e("----", "pageId--------"+job.get("pageId"));
-                            Log.e("----", "quesitionId--------"+job.get("quesitionId"));
-                            Log.e("----", "answerId--------"+job.get("answerId"));
-                        } catch (JSONException e) {
-                            // TODO Auto-generated catch block
-                            e.printStackTrace();
-                        }  // 遍历 jsonarray 数组，把每一个对象转成 json 对象
-
-                    }
-
-                }
-
-            }
-
         }
     }
+
+
 
     class answerItemOnClickListener implements View.OnClickListener {
         private int i;
@@ -296,7 +268,7 @@ public class MainActivity extends AppCompatActivity {
                 if(the_answer_lists.get(j).getAns_state()==0){
                     //如果未被选中
                     txt.setTextColor(Color.parseColor("#EA5514"));
-                    imglist.get(i).get(j).setBackgroundResource(R.mipmap.dog);
+                    imglist.get(i).get(j).setBackgroundResource(R.mipmap.myheart);
 
                     the_answer_lists.get(j).setAns_state(1);
                     the_quesition_list.get(i).setQue_state(1);
@@ -315,7 +287,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 if(the_answer_lists.get(j).getAns_state()==0){
                     //如果当前未被选中
-                    imglist.get(i).get(j).setBackgroundResource(R.mipmap.dog);//true
+                    imglist.get(i).get(j).setBackgroundResource(R.mipmap.myheart);//true
                     the_answer_lists.get(j).setAns_state(1);
                     the_quesition_list.get(i).setQue_state(1);
                 }else{
@@ -354,17 +326,4 @@ public class MainActivity extends AppCompatActivity {
                 Spannable.SPAN_INCLUSIVE_INCLUSIVE);
         tv_test.setText(word);
     }
-
-    public void Main2Res(View v) {
-        // 给bnt1添加点击响应事件
-        Intent intent =new Intent(MainActivity.this,Result.class);
-        // 启动
-        startActivity(intent);
-    }
-
-
-
-
-
-
 }

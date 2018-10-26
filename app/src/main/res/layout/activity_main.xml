@@ -16,7 +16,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:background="#EA5514"
+            android:background="#7FA96A"
             android:orientation="vertical"
 
             >
@@ -28,7 +28,7 @@
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="调查问卷"
+                android:text="the ocean test"
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
         </LinearLayout>
@@ -41,7 +41,7 @@
             android:layout_marginLeft="30dp"
             android:layout_marginTop="40dp"
             android:textColor="#898989"
-            android:textSize="10sp" />
+            android:textSize="40sp" />
         <!--显示问题框，一个问题一个框-->
         <!--答案-->
         <LinearLayout
@@ -64,9 +64,10 @@
                 android:layout_gravity="center"
                 android:layout_marginBottom="30dp"
                 android:layout_marginTop="50dp"
+                android:background="#7FA96A"
                 android:gravity="center"
-                android:text="提交"
-                android:textColor="@android:color/white"
+                android:text="查看结果"
+                android:textColor="@android:color/background_dark"
                 android:textSize="20sp" />
         </LinearLayout>
     </LinearLayout>

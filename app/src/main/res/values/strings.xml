@@ -5,4 +5,9 @@
     <string name="begin">开始测试</string>
     <string name="whatOcean">？什么是大五人格理论？</string>
     <string name="weclome">欢迎进行大五人格测试</string>
+    <string name="TotalInconsistent">完全不符合</string>
+    <string name="RelativelyInconsistent">比较不符合</string>
+    <string name="Commonly">一般</string>
+    <string name="RelativelyConsistent">比较符合</string>
+    <string name="TotallyConsistent">完全符合</string>
 </resources>

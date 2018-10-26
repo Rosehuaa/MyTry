@@ -4,6 +4,9 @@ public class Answer {
 
     //答案id
     private String answerId;
+
+    //答案分数
+    private int score;
     //答案主体
     private String answer_content;
     //答案是否被解答
@@ -31,5 +34,13 @@ public class Answer {
 
     public void setAns_state(int ans_state) {
         this.ans_state = ans_state;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
     }
 }

@@ -5,14 +5,17 @@
     android:orientation="vertical"
     android:paddingTop="35dp">
 
+
+<!--问题的内容-->
     <TextView
         android:id="@+id/txt_question_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="14sp"
+        android:textSize="20dp"
         android:textColor="#3e3a39"
         android:layout_marginLeft="45dp"
         />
+    <!--答案的背景-->
     <LinearLayout
         android:id="@+id/lly_answer"
         android:layout_width="match_parent"
@@ -22,7 +25,7 @@
         android:layout_marginRight="30dp"
         android:layout_marginTop="10dp"
 
-        android:background="@drawable/ic_launcher_background">
+        android:background="#F0ECE3">
 
     </LinearLayout>
 
