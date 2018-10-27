@@ -4,12 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Result">
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="Re2re"
+        android:text="查看详细结果" />
 
     <rorbin.q.radarview.RadarView
         android:id="@+id/radarView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="500dp" />
 
 
 </LinearLayout>

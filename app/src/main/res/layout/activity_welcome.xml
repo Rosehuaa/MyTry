@@ -5,19 +5,37 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#F0ECE3"
+    android:gravity="center"
     tools:context=".Welcome">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/weclome"
-        android:textSize="36sp" />
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="100dp"
+        android:background="@mipmap/welcome"
+        android:text=" "
+        android:textColor="#6DA94F"
+        android:textSize="50dp"
+        app:fontFamily="casual" />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="50dp"
+        android:background="@mipmap/myheart"
         android:onClick="Wel2Bri"
-        android:text="@string/whatOcean" />
+        android:shadowColor="#F0ECE3"
+        android:text="@string/whatOcean"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
 </LinearLayout>

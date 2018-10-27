@@ -3,12 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#e6e4e3"
+    android:background="#F0ECE3"
+    tools:background="@android:color/background_light"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#F0ECE3"
         android:orientation="vertical">
         <!--垂直设置-->
 
@@ -16,40 +18,30 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:background="#7FA96A"
+            android:background="#F0ECE3"
             android:orientation="vertical"
 
             >
             <!--垂直设置-->
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="38dp"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="the ocean test"
-                android:textColor="@android:color/white"
-                android:textSize="18sp" />
         </LinearLayout>
-        <!--显示测试题目-->
-
-        <TextView
-            android:id="@+id/txt_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="40dp"
-            android:textColor="#898989"
-            android:textSize="40sp" />
+        <!--显示测试题题目-->
+<!--测试题标题-->
+        <!--<TextView-->
+            <!--android:id="@+id/txt_title"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="30dp"-->
+            <!--android:layout_marginTop="40dp"-->
+            <!--android:textColor="#C2D3C1"-->
+            <!--android:textSize="40sp" />-->
         <!--显示问题框，一个问题一个框-->
         <!--答案-->
         <LinearLayout
             android:id="@+id/lly_test"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-        </LinearLayout>
+            android:orientation="vertical"></LinearLayout>
 
         <!--提交-->
         <LinearLayout
@@ -64,11 +56,11 @@
                 android:layout_gravity="center"
                 android:layout_marginBottom="30dp"
                 android:layout_marginTop="50dp"
-                android:background="#7FA96A"
+                android:background="#FFC2D3C1"
                 android:gravity="center"
                 android:text="查看结果"
                 android:textColor="@android:color/background_dark"
-                android:textSize="20sp" />
+                android:textSize="14sp" />
         </LinearLayout>
     </LinearLayout>
 

@@ -11,14 +11,14 @@ public class Page {
     //问卷主题
     private String title;
     //题目
-    private ArrayList<Quesition> quesitions;
+    private ArrayList<Question> questions;
 
 
-    public ArrayList<Quesition> getQuesitions() {
-        return quesitions;
+    public ArrayList<Question> getQuestions() {
+        return questions;
     }
-    public void setQuesitions(ArrayList<Quesition> quesitions) {
-        this.quesitions = quesitions;
+    public void setQuestions(ArrayList<Question> questions) {
+        this.questions = questions;
     }
 
     public String getPageId() {

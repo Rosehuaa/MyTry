@@ -1,13 +1,15 @@
 <resources>
-    <string name="app_name">MyTry</string>
-    <string name="content">其中五大人格分别为 开放性（openness）：具有想象、审美、情感丰富、求异、创造、智能等特质。 责任心（conscientiousness）：显示胜任、公正、条理、尽职、成就、自律、谨慎、克制等特点。 外倾性（extraversion）：表现出热情、社交、果断、活跃、冒险、乐观等特质。 宜人性（agreeableness）：具有信任、利他、直率、依从、谦虚、移情等特质。 神经质或情绪稳定性（neuroticism）：具有平衡焦虑、敌对、压抑、自我意识、冲动、脆弱等情绪的特质，即具有保持情绪稳定的能力。</string>
-    <string name="content1">大五人格（OCEAN），也被称之为人格的海洋，可以通过NEO-PI-R评定。</string>
-    <string name="begin">开始测试</string>
-    <string name="whatOcean">？什么是大五人格理论？</string>
-    <string name="weclome">欢迎进行大五人格测试</string>
+    <string name="app_name">点心</string>
+    <string name="content">没有找到内容</string>
+    <string name="content1">大五人格（OCEAN）</string>
+    <string name="begin">开始测试(240题)</string>
+    <string name="begin2">开始测试(5题测试版)</string>
+    <string name="whatOcean">进入</string>
+    <string name="welcome">点心</string>
     <string name="TotalInconsistent">完全不符合</string>
     <string name="RelativelyInconsistent">比较不符合</string>
     <string name="Commonly">一般</string>
     <string name="RelativelyConsistent">比较符合</string>
     <string name="TotallyConsistent">完全符合</string>
+    <string name="ana">结果分析失败</string>
 </resources>

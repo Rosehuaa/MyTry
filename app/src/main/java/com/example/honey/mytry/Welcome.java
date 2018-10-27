@@ -11,10 +11,12 @@ public class Welcome extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
+
+
     }
     public void Wel2Bri(View v) {
         // 给bnt1添加点击响应事件
-        Intent intent =new Intent(Welcome.this,BriefIntroduction.class);
+        Intent intent =new Intent(Welcome.this,Classification.class);
         // 启动
         startActivity(intent);
     }

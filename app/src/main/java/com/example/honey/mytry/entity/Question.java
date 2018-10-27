@@ -2,10 +2,10 @@ package com.example.honey.mytry.entity;
 
 import java.util.ArrayList;
 
-public class Quesition {
+public class Question {
 
     //题目id
-    private String quesitionId;
+    private int questionId;
     //单选多选标识
     private String type;
     //题目
@@ -15,12 +15,12 @@ public class Quesition {
     //是否解答
     private int que_state;
 
-    public String getQuesitionId() {
-        return quesitionId;
+    public int getQuestionId() {
+        return questionId;
     }
 
-    public void setQuesitionId(String quesitionId) {
-        this.quesitionId = quesitionId;
+    public void setQuestionId(int quesitionId) {
+        this.questionId = quesitionId;
     }
 
     public String getType() {
