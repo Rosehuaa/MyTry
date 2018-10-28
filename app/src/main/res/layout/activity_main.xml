@@ -35,6 +35,7 @@
             <!--android:layout_marginTop="40dp"-->
             <!--android:textColor="#C2D3C1"-->
             <!--android:textSize="40sp" />-->
+
         <!--显示问题框，一个问题一个框-->
         <!--答案-->
         <LinearLayout

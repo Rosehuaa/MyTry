@@ -77,11 +77,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initDate() {
-
-
-
-
-
 //定义初始化问题
 
         ArrayList<Question> questions=new ArrayList<Question>();
@@ -331,7 +326,8 @@ public class MainActivity extends AppCompatActivity {
         tv_test.setText(word);
     }
 
-    public ArrayList<Question> readCSV(String path) {
+    public ArrayList<Question> readCSV(String path) {//获取asserts中的数据
+
         ArrayList<Question> questions=new ArrayList<Question>();
 
         InputStream fileInputStream = null;

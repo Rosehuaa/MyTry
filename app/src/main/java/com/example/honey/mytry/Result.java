@@ -31,11 +31,11 @@ public class Result extends AppCompatActivity {
 //        Toast.makeText(getApplicationContext(), "加载布局", Toast.LENGTH_LONG).show();
 
         Intent intent = getIntent();
-        o = intent.getFloatExtra("o",0f);
-        c = intent.getFloatExtra("c",0f);
-        e = intent.getFloatExtra("e",0f);
-        a = intent.getFloatExtra("a",0f);
-        n = intent.getFloatExtra("n",0f);
+        o = intent.getFloatExtra("o",0.0f);
+        c = intent.getFloatExtra("c",0.0f);
+        e = intent.getFloatExtra("e",0.0f);
+        a = intent.getFloatExtra("a",0.0f);
+        n = intent.getFloatExtra("n",0.0f);
 //        Toast.makeText(getApplicationContext(), "得到数据", Toast.LENGTH_LONG).show();
 
         System.out.printf("%f,%f,%f,%f,%f",o,c,e,a,n);
