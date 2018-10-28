@@ -44,7 +44,7 @@ public class BriefIntroduction extends AppCompatActivity {
 
     }
 
-    public void Bri2Main(View v) {
+    public void Bri2Main2(View v) {
 
 
         if(name.equals("ocean")){
@@ -55,17 +55,18 @@ public class BriefIntroduction extends AppCompatActivity {
             // 启动
             startActivity(intent);
         }
-        else if(name.equals("ocean2")){
-            // 给bnt1添加点击响应事件
-            Intent intent =new Intent(BriefIntroduction.this,MainActivity.class);
-
-            intent.putExtra("topath", "ocean_q2.txt");
-            // 启动
-            startActivity(intent);
-        }
         else{
             Toast.makeText(getApplicationContext(), "未找到测试题", Toast.LENGTH_LONG).show();
         }
+
+    }
+    public void Bri2Main(View v){
+        // 给bnt1添加点击响应事件
+        Intent intent =new Intent(BriefIntroduction.this,MainActivity.class);
+
+        intent.putExtra("path", "ocean_q.txt");
+        // 启动
+        startActivity(intent);
 
     }
 
