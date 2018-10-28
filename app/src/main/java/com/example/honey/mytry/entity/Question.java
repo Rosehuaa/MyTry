@@ -4,16 +4,16 @@ import java.util.ArrayList;
 
 public class Question {
 
-    //题目id
-    private int questionId;
-    //单选多选标识
-    private String type;
-    //题目
-    private String content;
-    //选项
-    private ArrayList<Answer> answers;
-    //是否解答
-    private int que_state;
+
+    private int questionId;//题目id
+
+    private String type;    //单选多选标识
+
+    private String content;   //题目内容
+
+    private ArrayList<Answer> answers;//选项list
+
+    private int que_state;//本题是否解答
 
     public int getQuestionId() {
         return questionId;

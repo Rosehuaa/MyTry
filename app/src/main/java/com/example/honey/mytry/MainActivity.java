@@ -162,12 +162,14 @@ public class MainActivity extends AppCompatActivity {
             //这是第三层布局要加入的地方
             LinearLayout add_layout=(LinearLayout)que_view.findViewById(R.id.lly_answer);//实体化lly_answer的LinearLayout
 
+            //问题加入题号
+            String questionTol=the_question_list.get(i).getQuestionId()+". "+the_question_list.get(i).getContent();
             //判断单选-多选来实现后面是*号还是*多选，
             if(the_question_list.get(i).getType().equals("1")){
-                set(txt_que,the_question_list.get(i).getContent(),1);//将问题内容放入txt_question_item的TextView
+                set(txt_que,questionTol,1);//将问题内容放入txt_question_item的TextView
                 //set(textView,content,type)
             }else{
-                set(txt_que,the_question_list.get(i).getContent(),0);
+                set(txt_que,questionTol,0);
             }
             //获得答案即第三层数据
             the_answer_list=the_question_list.get(i).getAnswers();//获得本题目的答案选项
@@ -239,8 +241,6 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
-
-
 
     class answerItemOnClickListener implements View.OnClickListener {
         private int i;
@@ -375,11 +375,11 @@ public class MainActivity extends AppCompatActivity {
                 t1=the_question_list.get(i).getAnswers().get(j).getAns_state();
                 t2=the_question_list.get(i).getAnswers().get(j).getScore();
                 t=t1*t2;
-                if((i % 5) == 0){ e=e+t;}
-                else if((i % 5) == 1){o=o+t;}
-                else if((i % 5) == 2){c=c+t;}
+                if((i % 5) == 0){ n=n+t;}
+                else if((i % 5) == 1){e=e+t;}
+                else if((i % 5) == 2){o=o+t;}
                 else if((i % 5) == 3){a=a+t;}
-                else if((i % 5) == 4){n=n+t;}
+                else if((i % 5) == 4){c=c+t;}
             }
         }
     }

@@ -25,10 +25,10 @@ public class Result extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        Toast.makeText(getApplicationContext(), "进入雷达图", Toast.LENGTH_LONG).show();
+//        Toast.makeText(getApplicationContext(), "进入雷达图", Toast.LENGTH_LONG).show();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
-        Toast.makeText(getApplicationContext(), "加载布局", Toast.LENGTH_LONG).show();
+//        Toast.makeText(getApplicationContext(), "加载布局", Toast.LENGTH_LONG).show();
 
         Intent intent = getIntent();
         o = intent.getFloatExtra("o",0f);
@@ -36,7 +36,7 @@ public class Result extends AppCompatActivity {
         e = intent.getFloatExtra("e",0f);
         a = intent.getFloatExtra("a",0f);
         n = intent.getFloatExtra("n",0f);
-        Toast.makeText(getApplicationContext(), "得到数据", Toast.LENGTH_LONG).show();
+//        Toast.makeText(getApplicationContext(), "得到数据", Toast.LENGTH_LONG).show();
 
         System.out.printf("%f,%f,%f,%f,%f",o,c,e,a,n);
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~");
@@ -60,8 +60,8 @@ public class Result extends AppCompatActivity {
         toresult.putExtra("o", o);
         toresult.putExtra("c", c);
         toresult.putExtra("e", e);
-        toresult.putExtra("e", a);
-        toresult.putExtra("e", n);
+        toresult.putExtra("a", a);
+        toresult.putExtra("n", n);
         // 启动
         startActivity(toresult);
     }
